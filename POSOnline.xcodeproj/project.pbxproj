@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1732D2FE17F2C38900F51888 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1732D2FD17F2C38900F51888 /* UIKit.framework */; };
+		1732D30017F2C38900F51888 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1732D2FF17F2C38900F51888 /* Foundation.framework */; };
+		1732D30217F2C38900F51888 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1732D30117F2C38900F51888 /* CoreGraphics.framework */; };
+		1732D30817F2C38900F51888 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1732D30617F2C38900F51888 /* InfoPlist.strings */; };
+		1732D30A17F2C38900F51888 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1732D30917F2C38900F51888 /* main.m */; };
+		1732D30E17F2C38900F51888 /* POSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1732D30D17F2C38900F51888 /* POSAppDelegate.m */; };
+		1732D31017F2C38900F51888 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1732D30F17F2C38900F51888 /* Default.png */; };
+		1732D31217F2C38900F51888 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1732D31117F2C38900F51888 /* Default@2x.png */; };
+		1732D31417F2C38900F51888 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1732D31317F2C38900F51888 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1732D2FA17F2C38900F51888 /* POSOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POSOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1732D2FD17F2C38900F51888 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1732D2FF17F2C38900F51888 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1732D30117F2C38900F51888 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1732D30517F2C38900F51888 /* POSOnline-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "POSOnline-Info.plist"; sourceTree = "<group>"; };
+		1732D30717F2C38900F51888 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1732D30917F2C38900F51888 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1732D30B17F2C38900F51888 /* POSOnline-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POSOnline-Prefix.pch"; sourceTree = "<group>"; };
+		1732D30C17F2C38900F51888 /* POSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POSAppDelegate.h; sourceTree = "<group>"; };
+		1732D30D17F2C38900F51888 /* POSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POSAppDelegate.m; sourceTree = "<group>"; };
+		1732D30F17F2C38900F51888 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1732D31117F2C38900F51888 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1732D31317F2C38900F51888 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1732D2F717F2C38900F51888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1732D2FE17F2C38900F51888 /* UIKit.framework in Frameworks */,
+				1732D30017F2C38900F51888 /* Foundation.framework in Frameworks */,
+				1732D30217F2C38900F51888 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1732D2F117F2C38900F51888 = {
+			isa = PBXGroup;
+			children = (
+				1732D30317F2C38900F51888 /* POSOnline */,
+				1732D2FC17F2C38900F51888 /* Frameworks */,
+				1732D2FB17F2C38900F51888 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1732D2FB17F2C38900F51888 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1732D2FA17F2C38900F51888 /* POSOnline.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1732D2FC17F2C38900F51888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1732D2FD17F2C38900F51888 /* UIKit.framework */,
+				1732D2FF17F2C38900F51888 /* Foundation.framework */,
+				1732D30117F2C38900F51888 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1732D30317F2C38900F51888 /* POSOnline */ = {
+			isa = PBXGroup;
+			children = (
+				1732D30C17F2C38900F51888 /* POSAppDelegate.h */,
+				1732D30D17F2C38900F51888 /* POSAppDelegate.m */,
+				1732D30417F2C38900F51888 /* Supporting Files */,
+			);
+			path = POSOnline;
+			sourceTree = "<group>";
+		};
+		1732D30417F2C38900F51888 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1732D30517F2C38900F51888 /* POSOnline-Info.plist */,
+				1732D30617F2C38900F51888 /* InfoPlist.strings */,
+				1732D30917F2C38900F51888 /* main.m */,
+				1732D30B17F2C38900F51888 /* POSOnline-Prefix.pch */,
+				1732D30F17F2C38900F51888 /* Default.png */,
+				1732D31117F2C38900F51888 /* Default@2x.png */,
+				1732D31317F2C38900F51888 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1732D2F917F2C38900F51888 /* POSOnline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1732D31717F2C38900F51888 /* Build configuration list for PBXNativeTarget "POSOnline" */;
+			buildPhases = (
+				1732D2F617F2C38900F51888 /* Sources */,
+				1732D2F717F2C38900F51888 /* Frameworks */,
+				1732D2F817F2C38900F51888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = POSOnline;
+			productName = POSOnline;
+			productReference = 1732D2FA17F2C38900F51888 /* POSOnline.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1732D2F217F2C38900F51888 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = POS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Quoc Nguyen";
+			};
+			buildConfigurationList = 1732D2F517F2C38900F51888 /* Build configuration list for PBXProject "POSOnline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1732D2F117F2C38900F51888;
+			productRefGroup = 1732D2FB17F2C38900F51888 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1732D2F917F2C38900F51888 /* POSOnline */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1732D2F817F2C38900F51888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1732D30817F2C38900F51888 /* InfoPlist.strings in Resources */,
+				1732D31017F2C38900F51888 /* Default.png in Resources */,
+				1732D31217F2C38900F51888 /* Default@2x.png in Resources */,
+				1732D31417F2C38900F51888 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1732D2F617F2C38900F51888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1732D30A17F2C38900F51888 /* main.m in Sources */,
+				1732D30E17F2C38900F51888 /* POSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1732D30617F2C38900F51888 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1732D30717F2C38900F51888 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1732D31517F2C38900F51888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1732D31617F2C38900F51888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1732D31817F2C38900F51888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POSOnline/POSOnline-Prefix.pch";
+				INFOPLIST_FILE = "POSOnline/POSOnline-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1732D31917F2C38900F51888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POSOnline/POSOnline-Prefix.pch";
+				INFOPLIST_FILE = "POSOnline/POSOnline-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1732D2F517F2C38900F51888 /* Build configuration list for PBXProject "POSOnline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1732D31517F2C38900F51888 /* Debug */,
+				1732D31617F2C38900F51888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1732D31717F2C38900F51888 /* Build configuration list for PBXNativeTarget "POSOnline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1732D31817F2C38900F51888 /* Debug */,
+				1732D31917F2C38900F51888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1732D2F217F2C38900F51888 /* Project object */;
+}
