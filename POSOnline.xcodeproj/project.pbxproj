@@ -16,6 +16,12 @@
 		1732D31017F2C38900F51888 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1732D30F17F2C38900F51888 /* Default.png */; };
 		1732D31217F2C38900F51888 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1732D31117F2C38900F51888 /* Default@2x.png */; };
 		1732D31417F2C38900F51888 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1732D31317F2C38900F51888 /* Default-568h@2x.png */; };
+		17AB666017F2C5E100866BFD /* Categories in Resources */ = {isa = PBXBuildFile; fileRef = 17AB665F17F2C5E100866BFD /* Categories */; };
+		17AB666217F2C60500866BFD /* Controllers in Resources */ = {isa = PBXBuildFile; fileRef = 17AB666117F2C60500866BFD /* Controllers */; };
+		17AB666417F2C61600866BFD /* Managers in Resources */ = {isa = PBXBuildFile; fileRef = 17AB666317F2C61600866BFD /* Managers */; };
+		17AB666617F2C61F00866BFD /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 17AB666517F2C61F00866BFD /* Models */; };
+		17AB666817F2C62700866BFD /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 17AB666717F2C62700866BFD /* Resources */; };
+		17AB666A17F2C63000866BFD /* Vendors in Resources */ = {isa = PBXBuildFile; fileRef = 17AB666917F2C63000866BFD /* Vendors */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		1732D30F17F2C38900F51888 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1732D31117F2C38900F51888 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1732D31317F2C38900F51888 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		17AB665F17F2C5E100866BFD /* Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Categories; sourceTree = "<group>"; };
+		17AB666117F2C60500866BFD /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		17AB666317F2C61600866BFD /* Managers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Managers; sourceTree = "<group>"; };
+		17AB666517F2C61F00866BFD /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		17AB666717F2C62700866BFD /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		17AB666917F2C63000866BFD /* Vendors */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Vendors; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,12 @@
 		1732D30317F2C38900F51888 /* POSOnline */ = {
 			isa = PBXGroup;
 			children = (
+				17AB665F17F2C5E100866BFD /* Categories */,
+				17AB666117F2C60500866BFD /* Controllers */,
+				17AB666317F2C61600866BFD /* Managers */,
+				17AB666517F2C61F00866BFD /* Models */,
+				17AB666717F2C62700866BFD /* Resources */,
+				17AB666917F2C63000866BFD /* Vendors */,
 				1732D30C17F2C38900F51888 /* POSAppDelegate.h */,
 				1732D30D17F2C38900F51888 /* POSAppDelegate.m */,
 				1732D30417F2C38900F51888 /* Supporting Files */,
@@ -153,8 +171,14 @@
 			files = (
 				1732D30817F2C38900F51888 /* InfoPlist.strings in Resources */,
 				1732D31017F2C38900F51888 /* Default.png in Resources */,
+				17AB666A17F2C63000866BFD /* Vendors in Resources */,
+				17AB666617F2C61F00866BFD /* Models in Resources */,
+				17AB666417F2C61600866BFD /* Managers in Resources */,
+				17AB666217F2C60500866BFD /* Controllers in Resources */,
+				17AB666017F2C5E100866BFD /* Categories in Resources */,
 				1732D31217F2C38900F51888 /* Default@2x.png in Resources */,
 				1732D31417F2C38900F51888 /* Default-568h@2x.png in Resources */,
+				17AB666817F2C62700866BFD /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +307,7 @@
 				1732D31917F2C38900F51888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
