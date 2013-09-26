@@ -98,20 +98,20 @@
 #pragma mark - Rotations
 
 //iOS 5.0 Rotations
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-}
-
-//iOS 6.0 Rotations
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
-- (NSUInteger) supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
-}
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+//}
+//
+////iOS 6.0 Rotations
+//- (BOOL)shouldAutorotate
+//{
+//    return NO;
+//}
+//- (NSUInteger) supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+//}
 
 
 

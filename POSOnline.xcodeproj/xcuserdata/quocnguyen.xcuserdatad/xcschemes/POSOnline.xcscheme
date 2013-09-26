@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1732D2F917F2C38900F51888"
+               BlueprintIdentifier = "1714AAAA17F2D98E0034CA3E"
                BuildableName = "POSOnline.app"
                BlueprintName = "POSOnline"
                ReferencedContainer = "container:POSOnline.xcodeproj">
@@ -28,11 +28,21 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1714AAC517F2D98E0034CA3E"
+               BuildableName = "POSOnlineTests.xctest"
+               BlueprintName = "POSOnlineTests"
+               ReferencedContainer = "container:POSOnline.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1732D2F917F2C38900F51888"
+            BlueprintIdentifier = "1714AAAA17F2D98E0034CA3E"
             BuildableName = "POSOnline.app"
             BlueprintName = "POSOnline"
             ReferencedContainer = "container:POSOnline.xcodeproj">
@@ -51,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1732D2F917F2C38900F51888"
+            BlueprintIdentifier = "1714AAAA17F2D98E0034CA3E"
             BuildableName = "POSOnline.app"
             BlueprintName = "POSOnline"
             ReferencedContainer = "container:POSOnline.xcodeproj">
@@ -69,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1732D2F917F2C38900F51888"
+            BlueprintIdentifier = "1714AAAA17F2D98E0034CA3E"
             BuildableName = "POSOnline.app"
             BlueprintName = "POSOnline"
             ReferencedContainer = "container:POSOnline.xcodeproj">

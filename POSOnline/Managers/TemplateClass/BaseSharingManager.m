@@ -266,15 +266,15 @@ SINGLETON_MACRO
     messageBody = [messageBody stringByAppendingFormat:@"</body></html>"];
     
     //Dynamic settings from server
-    NSString *email = [[BaseStorageManager sharedInstance] getSettingStringValueWithKey:SETTINGS_FEEDBACK_EMAIL
-                                                                          defaultValue:SETTINGS_FEEDBACK_EMAIL_DEFAULT];
-    NSString *subject = [[BaseStorageManager sharedInstance] getSettingStringValueWithKey:SETTINGS_FEEDBACK_SUBJECT
-                                                                            defaultValue:SETTINGS_FEEDBACK_SUBJECT_DEFAULT];
-    
-    [mailComposer setToRecipients:@[email]];
-    [mailComposer setSubject:subject];
-    [mailComposer setMessageBody:messageBody isHTML:YES];
-    
+//    NSString *email = [[BaseStorageManager sharedInstance] getSettingStringValueWithKey:SETTINGS_FEEDBACK_EMAIL
+//                                                                          defaultValue:SETTINGS_FEEDBACK_EMAIL_DEFAULT];
+//    NSString *subject = [[BaseStorageManager sharedInstance] getSettingStringValueWithKey:SETTINGS_FEEDBACK_SUBJECT
+//                                                                            defaultValue:SETTINGS_FEEDBACK_SUBJECT_DEFAULT];
+//    
+//    [mailComposer setToRecipients:@[email]];
+//    [mailComposer setSubject:subject];
+//    [mailComposer setMessageBody:messageBody isHTML:YES];
+//    
     //BCC myself (if logged in)
     NSString * myEmail = [[EGCUserManager sharedInstance].currentUser email];
     if ([myEmail length] > 3 && [myEmail rangeOfString:@"@"].location != NSNotFound)

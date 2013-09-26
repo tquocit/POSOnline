@@ -14,4 +14,5 @@
 -(UIImage *)crop:(CGRect)rect;
 -(UIImage *)squareCrop;
 -(UIImage *)resizableImageWithStandardInsets;
++ (UIImage *)imageWithColor:(UIColor *)color;
 @end

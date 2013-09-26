@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Quoc Nguyen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseAppDelegate.h"
 
-@interface POSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface POSAppDelegate : BaseAppDelegate
 
 @property (strong, nonatomic) UIWindow *window;
 

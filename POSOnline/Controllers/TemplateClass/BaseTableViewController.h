@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EGCViewController.h"
+#import "POSViewController.h"
 
-@interface BaseTableViewController : EGCViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface BaseTableViewController : POSViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UILabel *lblInstruction;

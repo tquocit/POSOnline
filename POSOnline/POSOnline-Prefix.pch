@@ -1,14 +1,199 @@
 //
-// Prefix header for all source files of the 'POSOnline' target in the 'POSOnline' project
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
 //
 
-#import <Availability.h>
+#ifdef DEBUG
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
+#define API_SERVER_HOST                 @"http://hgwm2359-staging.herokuapp.com"
+#define URBAN_AIRSHIP_APP_KEY           @""
+#define URBAN_AIRSHIP_APP_SECRET        @""
+
+#else
+
+#define API_SERVER_HOST                 @"http://hgwm2359-staging.herokuapp.com"
+#define URBAN_AIRSHIP_APP_KEY           @""
+#define URBAN_AIRSHIP_APP_SECRET        @""
+
 #endif
+//------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
 
-#ifdef __OBJC__
-  #import <UIKit/UIKit.h>
-  #import <Foundation/Foundation.h>
+#define API_PREFIX                                  @"/api/v1"
+#define API_OAUTH_TOKEN                             @"/oauth/token"
+
+//Settings keys on server (should prefix with ios_)
+#define SETTINGS_CLIENT_ID                          @"ios_client_id"
+#define SETTINGS_CLIENT_SECRET                      @"ios_client_secret"
+#define SETTINGS_CRITERCISM_TOKEN                   @"ios_critercism_token"
+#define SETTINGS_UPLOAD_IMAGE_SIZE                  @"ios_upload_image_size"
+#define SETTINGS_UPLOAD_IMAGE_QUALITY               @"ios_upload_image_quality"
+#define SETTINGS_FEEDBACK_EMAIL                     @"ios_feedback_email"
+#define SETTINGS_FEEDBACK_SUBJECT                   @"ios_feedback_subject"
+#define SETTINGS_FEEDBACK_BODY                      @"ios_feedback_body"
+
+//Hardcoded default values
+#define SETTINGS_CLIENT_ID_DEFAULT                  @""
+#define SETTINGS_CLIENT_SECRET_DEFAULT              @""
+#define SETTINGS_CRITERCISM_TOKEN_DEFAULT           @""
+#define SETTINGS_UPLOAD_IMAGE_SIZE_DEFAULT          1024
+#define SETTINGS_UPLOAD_IMAGE_QUALITY_DEFAULT       0.70
+#define SETTINGS_FEEDBACK_EMAIL_DEFAULT             @"feedback@hungrygowhere.com"
+#define SETTINGS_FEEDBACK_SUBJECT_DEFAULT           @"HungryGoWhere iOS Feedback"
+#define SETTINGS_FEEDBACK_BODY_DEFAULT              @"My feedback..."
+
+#define ENABLE_FAKE_LOCATION                        YES         //Use the coordinate below, ignore location server
+#define FAKE_COORDINATE                             CLLocationCoordinate2DMake(3.18985899, 101.64969727)
+//------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
+
+#import <Availability.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <FacebookSDK/FacebookSDK.h>
+
+//Categories/extensions
+#import "ISO8601DateFormatter.h"
+#import "MKMapView+Additions.h"
+#import "NSArray+Additions.h"
+#import "NSCalendar+Additions.h"
+#import "NSDate+Additions.h"
+#import "NSDictionary+Additions.h"
+#import "NSObject+Additions.h"
+#import "NSString+ActiveSupportInflector.h"
+#import "NSString+Additions.h"
+#import "NSString+Validation.h"
+#import "UIAlertView+Additions.h"
+#import "UIBarButtonItem+Custom.h"
+#import "UIColor+Custom.h"
+#import "UIColor+Hex.h"
+#import "UIFont+Additions.h"
+#import "UIImage+Additions.h"
+#import "UIImageView+Additions.h"
+#import "UILabel+Additions.h"
+#import "UINavigationController+Additions.h"
+#import "UIView+Additions.h"
+#import "UIView+Nib.h"
+#import "UIViewController+Additions.h"
+#import "UIWebView+Additions.h"
+
+//Vendors
+#import "AFNetworking.h"
+#import "AFUrbanAirshipClient.h"
+#import "Crittercism.h"
+#import "DDPageControl.h"
+#import "EasyTableView.h"
+#import "IIViewDeckController.h"
+#import "JSONKit.h"
+#import "OpenUDID+Keychain.h"
+#import "OpenUDID.h"
+#import "PSActionSheet.h"
+#import "PSAlertView.h"
+#import "PSTCollectionView.h"
+#import "QuadCurveDefaultMenuItemFactory.h"
+#import "QuadCurveMenu.h"
+#import "Reachability.h"
+#import "SDImageCache.h"
+#import "SDWebImagePrefetcher.h"
+#import "SVProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "WCAlertView.h"
+#import "ODRefreshControl.h"
+#import "TTTAttributedLabel.h"
+#import "MSLabel.h"
+
+//Models
+#import "BaseModel.h"
+#import "EGCSetting.h"
+#import "EGCUser.h"
+
+//Views
+#import "BaseTableViewCell.h"
+
+//Managers
+#import "BaseManager.h"
+#import "BaseDeviceLibrary.h"
+#import "BaseLocationManager.h"
+#import "BaseStorageManager.h"
+#import "BaseNetworkManager.h"
+#import "BaseSharingManager.h"
+#import "FacebookManager.h"
+#import "EGCLoadingManager.h"
+#import "EGCUserManager.h"
+
+//Controllers
+#import "BaseViewController.h"
+#import "BaseNavigationController.h"
+#import "BaseTableViewController.h"
+
+//------------------------------------------------------------------------------------------------------
+// Project-specific
+//
+//#import "EGCAppDelegate.h"
+//#import "EGCViewController.h"
+//#import "EGCTableViewController.h"
+
+
+
+//
+// Convenient macro to check app version
+//
+#define APP_VERSION                                 ([[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey])
+#define APP_VERSION_EQUAL_TO(v)                     ([APP_VERSION compare:v options:NSNumericSearch] == NSOrderedSame)
+#define APP_VERSION_GREATER_THAN(v)                 ([APP_VERSION compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define APP_VERSION_GREATER_THAN_OR_EQUAL_TO(v)     ([APP_VERSION compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define APP_VERSION_LESS_THAN(v)                    ([APP_VERSION compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define APP_VERSION_LESS_THAN_OR_EQUAL_TO(v)        ([APP_VERSION compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+//
+// Convenient macro to check system version
+// Source: http://stackoverflow.com/questions/3339722/check-iphone-ios-version
+//
+#define SYSTEM_VERSION                              ([[UIDevice currentDevice] systemVersion])
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([SYSTEM_VERSION compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([SYSTEM_VERSION compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+#define DEVICE_NAME                                 ([[UIDevice currentDevice] name])
+
+#define IS_LANDSCAPE                                (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
+#define IS_PORTRAIT                                 (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
+#define IS_IPAD                                     ([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad)
+#define IS_NOT_IPAD                                 ([UIDevice currentDevice].userInterfaceIdiom!=UIUserInterfaceIdiomPad)
+#define IS_RETINA                                   ([UIScreen mainScreen].scale > 1)
+#define DEVICE_SCALE                                ([UIScreen mainScreen].scale)
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+//
+// Source: http://iphoneincubator.com/blog/debugging/the-evolution-of-a-replacement-for-nslog
+// Source: http://www.cimgf.com/2010/05/02/my-current-prefix-pch-file/
+//
+// DLog is almost a drop-in replacement for NSLog to turn off logging for release build
+//
+// add -DDEBUG to OTHER_CFLAGS in the build user defined settings
+//
+// Usage:
+//
+// DLog();
+// DLog(@"here");
+// DLog(@"value: %d", x);
+// Unfortunately this doesn't work DLog(aStringVariable); you have to do this instead DLog(@"%@", aStringVariable);
+//
+
+#ifdef DEBUG
+#define DLog(__FORMAT__, ...) NSLog((@"%s [L:%d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define ALog(...) [[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] file:[NSString stringWithCString:__FILE__ encoding:NSUTF8StringEncoding] lineNumber:__LINE__ description:__VA_ARGS__]
+#else
+#define DLog(...) do {} while (0)
+#define ALog(__FORMAT__, ...) NSLog((@"%s [L:%d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #endif
